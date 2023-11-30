@@ -18,8 +18,10 @@ const config = {
   logo_url: "https://nebulix.unfolding.io/logo.svg",
   local_backend: true,
   backend: {
-    name: "github",
-    repo: "BurdenSolutions/shop-gryphonvook",
+    //name: "github",
+    //repo: "BurdenSolutions/shop-gryphonvook",
+    name: "git-gateway",
+    branch: "main",
     commit_messages: {
 			create: 'Create {{collection}} "{{slug}}"',
 			update: 'Update {{collection}} "{{slug}}"',
@@ -88,6 +90,10 @@ const config = {
         }
       }
     </style>
+    <script 
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+      is:inline
+    ></script>
   </head>
   <body>
     <script

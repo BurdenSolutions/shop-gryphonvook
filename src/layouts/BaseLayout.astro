@@ -78,5 +78,16 @@ const contact = await getEntry("config", "contact");
       SmoothScroll();
       document.addEventListener("astro:beforeload", SmoothScroll);
     </script>
+    <script is:inline>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', user => {
+          if (!user) {
+            window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/';
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
